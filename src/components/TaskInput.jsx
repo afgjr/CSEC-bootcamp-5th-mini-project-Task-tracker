@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+import AddIcon from '@mui/icons-material/Add';
 import { useTasks } from '../store/taskContext';
 
 const TaskInput = () => {
@@ -14,6 +16,7 @@ const TaskInput = () => {
 
   return (
     <form className="task-input" onSubmit={handleAdd}>
+      
       <input
         type="text"
         className="input"
@@ -23,8 +26,9 @@ const TaskInput = () => {
         aria-label="Task text"
       />
       <button type="submit" className="btn btn-primary">
-        Add Task
+        <AddIcon/>
       </button>
+      
     </form>
   );
 };

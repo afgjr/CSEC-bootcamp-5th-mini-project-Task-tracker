@@ -1,4 +1,5 @@
 import React from 'react';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { useTasks } from '../store/taskContext';
 
 const TaskItem = ({ task }) => {
@@ -23,7 +24,7 @@ const TaskItem = ({ task }) => {
         onClick={() => deleteTask(task.id)}
         aria-label={`Delete ${task.text}`}
       >
-        Delete
+        <DeleteIcon/>
       </button>
     </li>
   );
